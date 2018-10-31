@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "HackPHS",
+    "version": "0.1",
+    
+    "browser_action": {
+      "default_icon": "static/images/icon.jpg",
+      "default_popup": "templates/popup.html",
+      "default_title": "HACKPHS!"
+    }
+  }

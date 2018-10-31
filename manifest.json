@@ -10,7 +10,7 @@
     "browser_action": {
         "default_icon": "static/images/icon.jpg",
         "default_popup": "templates/popup.html",
-        "default_title": "HACKPHS!"
+        "default_title": "HackPHS!"
       },
     
     "content_scripts": [

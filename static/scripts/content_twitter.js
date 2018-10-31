@@ -6,7 +6,7 @@ if (window.location.href === "https://twitter.com/intent/tweet") {
 
 function scrapeThePage() {
     let text = document.getElementById("status").value;
-    console.log("Scraped page! Recieved: " + text);
+    console.log("Scraped page! Received: " + text);
 }
 
 function cannotScrapePage() {

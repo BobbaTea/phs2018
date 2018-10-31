@@ -1,0 +1,7 @@
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+body {
+    min-width: 245px;
+}

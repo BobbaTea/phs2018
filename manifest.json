@@ -3,9 +3,22 @@
     "name": "HackPHS",
     "version": "0.1",
     
+    "permissions": [
+    "activeTab"
+    ],
+    
     "browser_action": {
-      "default_icon": "static/images/icon.jpg",
-      "default_popup": "templates/popup.html",
-      "default_title": "HACKPHS!"
-    }
-  }
+        "default_icon": "static/images/icon.jpg",
+        "default_popup": "templates/popup.html",
+        "default_title": "HACKPHS!"
+      },
+    
+    "content_scripts": [
+    {
+       "matches": [
+     "*://twitter.com/*"
+       ],
+       "js": ["scripts/content_twitter.js"]
+     }
+   ]
+   }

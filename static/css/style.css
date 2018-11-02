@@ -5,3 +5,56 @@ a:hover {
 body {
     min-width: 245px;
 }
+header.masthead {
+    background-color: #FF9300;
+}
+
+.i-badge {
+    border: 0;
+    height: 25%;
+    width: 25%;
+}
+
+.a-badge {
+    border: 0;
+    height: 42.5%;
+    width: 42.5%;
+}
+
+.idevice-img {
+    width: 112.44px;
+    height: 198.83px;
+}
+
+.spacer {
+    height: 10vh;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.blue {
+    color: #9feaf9;
+}
+
+.gold {
+    color: #fed136;
+}
+
+.green {
+    color: #66BB6A;
+}
+
+.white {
+    text-decoration-color: white;
+    color: white;
+}
+
+.invert:hover {
+    filter: invert(100);
+}

@@ -5,7 +5,10 @@ if (window.location.href === "https://twitter.com/intent/tweet") {
 }
 
 function scrapeThePage() {
-    let text = document.getElementById("status").value;
+    let text = document.getElementById("status").value; 
+    if (text === "kill the world")
+      return "<h3>Bad words were detected.</h3>";
+    else
     console.log("Scraped page! Received: " + text);
 }
 

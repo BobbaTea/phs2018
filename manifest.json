@@ -18,7 +18,7 @@
        "matches": [
      "*://twitter.com/*"
        ],
-       "js": ["scripts/content_twitter.js"]
+       "js": ["static/scripts/content_twitter.js"]
      }
    ]
    }

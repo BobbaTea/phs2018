@@ -2,7 +2,7 @@
 
 import twitter
 
-f=open("/Users/Samvit123/Desktop/SocialEye/outputone.txt","w+")
+f=open("/var/www/html/BackEnd/outputone.txt","w+")
 f.close()
 
 def analyze(handle):
@@ -12,16 +12,22 @@ def analyze(handle):
 
   twitter_access_secret = 'VrMwoLkpiHPH32xsRgtv9CC5QWtBTYoKbTcBX1okcKfE3'
 
-  twitter_api = twitter.Api(consumer_key=twitter_consumer_key, consumer_secret=twitter_consumer_secret, access_token_key=twitter_access_token, access_token_secret=twitter_access_secret, tweet_mode="extended")
+  twitter_api = twitter.Api(consumer_key=twitter_consumer_key, consumer_secret=twitter_consumer_secret, access_token_key=twitter_access_token, access_token_secret=twitter_access_secret, tweet_mode="exten$
 
   statuses = twitter_api.GetUserTimeline(screen_name=handle, count=200, include_rts=False)
 
   full_text=""
 
-  with open("/Users/Samvit123/Desktop/SocialEye/outputone.txt","a+",encoding="utf-8") as w:
+  with open("/var/www/html/BackEnd/outputone.txt","a+",encoding="utf-8") as w:
     for status in statuses:
         status = (status.full_text)
         w.write((status))
         w.write("\n")
 
 analyze("@realDonaldTrump")
+
+
+
+
+
+

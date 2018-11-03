@@ -1,7 +1,6 @@
 <?php
 
    include("sessionv.php");
-echo $_COOKIE["login_user"];
    if( session_verify()==false){
 header('Location: login.html'); 
 

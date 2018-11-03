@@ -14,7 +14,6 @@
       $count = mysqli_num_rows($result);	
       if($count == 1) {
           echo "naniii";
-         session_register("myusername");
          $_SESSION['login_user'] = $myusername;
          header("location: welcome.php");
       }else {

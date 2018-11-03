@@ -24,7 +24,7 @@ def analyze(handle):
         w.write((status))
         w.write("\n")
 
-analyze("@realDonaldTrump")
+analyze("@GodHatesFagsWBC")
 
 
 

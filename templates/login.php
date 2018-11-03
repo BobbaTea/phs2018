@@ -16,9 +16,10 @@
           echo "naniii";
   $_SESSION["login_user"] = $myusername;
        // setcookie("login_user", $myusername);
-         header("location: welcome.php");
+         header("location: analysis.php");
       }else {
           echo "no";
          $error = "Your Login Name or Password is invalid";
       }
+session_stop();
 ?>

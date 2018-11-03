@@ -190,3 +190,8 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+# prevent jb ws merges
+.idea/workspace.xml
+workspace.xml
+

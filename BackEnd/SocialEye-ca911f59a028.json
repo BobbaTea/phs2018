@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "socialeye-204014",
+  "private_key_id": "ca911f59a0287f6c5c9d1652b176a74052478298",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCrZoYTTo03vXlM\n+Ipuk0JvR0hNSP9WsHkCgSBSaEe+tTBdNS668q4DBAiclvAD3JNgGD2W2ygckyfB\n1J7jDpXSXURHDru5LtKPhyXerFqDaZJ6oX4h0K1QVCJMgsbbRKqfzsTO5/SW2FV/\npbuJ2Qzbz2QPSef+S5IYu3Fktw9Otn7m/gKPhs8Y1bjDAH4yju363s02NB5hKkod\nvaRKFE+dDEufLYRqAPmtloWWd/fvMcJp1dP4wF/5uY3W4ZFOAlXTb+0HgTBlyJGz\n8rbtkFK72VhYWB9WJtqQrliwSRDv7EWS7WxJ/mSlBACcOOIItd2zIbcYhLAwGuI1\nO/O8ca5RAgMBAAECggEAA2y9ghZAORxml5Shw3rayXltpumt/G/zQwsMd8kQoe1h\n5YLiB6dAtdu3RlW3vwQBx9pEJMcFQqjoEvXqJNRORxFJA3h2ZMlcOLT1G0FrX5PU\n8vFWIVvXkrLTqp60VX5GQIIzqYS1/OuerbnEiQkWui+nKq0J3yloZmkcZ2xG+IYh\nh839fg989OmDqR0jv58ZHCUm93qsEsPc+TNec2WQBLvVgimhOcQhfZTeYvpD5MQD\ntnVoBHHSs/fady1BvBbGc8wc2bKA9ZBjv1rDbSnl5P+w3mdjwL8TLR9hAp30xqsw\nLPiUWATwWsa0AlZHSE/r9pml8WNOu2pFiG1AqDYsvwKBgQDxFWIXdQieYXVYIi+p\nf8BL7ZQHJWW73WaAv6ylOtLLFFlVzjAMyuuOaPnRSZi/SSJTDlMDmMUansUdLfwk\nAXsFGU82U4dT4Nsx+yWCtR4gD7sXw3TGH0+atnIk5rbu1/sv46Dq8bj9raiq1+ZP\nFd/y5p9n+46jmf/q0q+Qe8sq8wKBgQC2AWdFtIvfHetDFV6XXCKmgDELV75YEWm2\n+n4mf16QscgfwCaK/udteYVZU+FMlUQG9/slP6iMQ0n7W2/atU/JbkNilG6jhPTv\n8vWEx0oDL/ZltP8T+4q6fJUgViNPCGgr155bGzi4P/jAAqEKq9TJwYoe0aWUaVYd\nE5xN2leKqwKBgFGt6PoBkNX4NwWRL4zB16jh6VEyfnFT5bKhPiEM+PYNAudrYCQ1\na/Fn55vcz3+fi52QMNf7HmySdj4YomCgj8l+dbP2QNdOS3V3nZHXQ0mhisXWVu35\nFcNZJPsTn870JgpnmNGA7CgmegrH8yPASYvGTyOvuvf66RXqI8lT59W5AoGADZ59\nQ9IGxWNPv21R7rGORjdBdD/UlnJ3HqIP3oGZaepjtzyBpdT9LEvzloOYUEq7FGpp\n+JeS3SwL1Ss6a3s1xTTjBfVlcgb47RuZE552A1cLcQDiNXSVJO89mXXYnolagi1Y\nRCj9TYw76OJJeqrw+UfqNfQqF7jqILLe91RnSJECgYBhzB82Q8P6wijH2GIsm4Nt\nVw/UEa7+mcsKH4FjRK8X8OAAgLFo9LOsa53aLolSoqs+GNIUsHVg53qpPS3VhJjs\ng9hk2hq8ncIsd3wkrL3TAJl/GWIZ8Cgrs34pj2idYm66x0uvnZhTOh+n1ztSi6+Y\n+fYh9Ca9YMitUYT6VaFBWA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "naturallang@socialeye-204014.iam.gserviceaccount.com",
+  "client_id": "116529867972788619372",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/naturallang%40socialeye-204014.iam.gserviceaccount.com"
+}

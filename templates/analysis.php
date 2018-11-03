@@ -8,6 +8,9 @@ header('Location: login.php');
   echo "true";  
  }
 
+if(isset($_POST['analyze'])){
+shell_exec("python3 Classification.py ".$handle." ".$_COOKIE['id'].";" );
+}
 ?>
 
 
@@ -71,6 +74,9 @@ header('Location: login.php');
                   <h4>0</h4>
                 </div>
                 <div class="card-action blue">
+                   <form action="">
+                   <input type="submit" name = "analyze">
+                      </form>
                   <a href="" class="white-text">Link</a>
                 </div>
               </div>

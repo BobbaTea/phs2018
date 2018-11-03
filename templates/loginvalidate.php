@@ -17,7 +17,7 @@
         setcookie("login_user", $row[0]);
          header("location: analysis.php");
       }else {
-                 header("location: login.html");
+                 header("location: login.php");
           echo "Your Login Name or Password is invalid";
          $error = "Your Login Name or Password is invalid";
       }

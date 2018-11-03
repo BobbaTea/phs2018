@@ -1,7 +1,7 @@
 <?php
 function session_verify(){
 
-if($_SESSION["login_user"]!=""){
+if($_COOKIE["login_user"]!=""){
 
 return true;
 

@@ -8,8 +8,8 @@
     ],
     
     "browser_action": {
-        "default_icon": "static/images/icon.jpg",
-        "default_popup": "templates/extension.html",
+        "default_icon": "static/img/logo.jpg",
+        "default_popup": "templates/extension-warning.html",
         "default_title": "HackPHS!"
       },
     

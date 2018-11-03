@@ -13,12 +13,12 @@
       $active = $row['active'];
       $count = mysqli_num_rows($result);	
       if($count == 1) {
-          echo "naniii";
 //  $_SESSION['login_user'] = $myusername;
         setcookie("login_user", $myusername);
          header("location: analysis.php");
       }else {
-          echo "no";
+                 header("location: login.html");
+          echo "Your Login Name or Password is invalid";
          $error = "Your Login Name or Password is invalid";
       }
 ?>

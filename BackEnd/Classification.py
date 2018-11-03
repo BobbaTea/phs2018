@@ -1,23 +1,24 @@
 # -*- coding: utf-8 -*-
-import time
+import requests
 import argparse
 import io
 import json
 import os
 
+from google.oauth2 import service_account
 from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
 
+creds = service_account.Credentials.from_service_account_file(
+    "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
+client = language.LanguageServiceClient(credentials=creds)
 
 poffensive = 0
 loffensive = 0
 
 poffensive_list = []
 loffensive_list = []
-
-
-client = language.LanguageServiceClient()
 
 file1 = open("final.txt","w")
 file1.close()
@@ -30,7 +31,9 @@ fo.close()
 
 
 def classify(text, verbose=True):
-    language_client = language.LanguageServiceClient()
+    creds = service_account.Credentials.from_service_account_file(
+        "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
+    language_client = language.LanguageServiceClient(credentials=creds)
 
     document = language.types.Document(
         content=text,
@@ -49,7 +52,7 @@ def classify(text, verbose=True):
 
     return result
 
-with open("outputone.txt","r",encoding="utf-8") as o:
+with open("outputone.txt","r") as o:
     r=o.readlines()
 
 i=0
@@ -85,32 +88,26 @@ while i<len(r):
 
     sentiment = client.analyze_sentiment(document=document).document_sentiment
 
-    try:
-        start = time.time()
-        analysis = classify(text)
-        for key in analysis:
-            with open("lastoutput.txt","a+") as w:
-                print ("category: "+key+" ")
-                print ("confidence: "+str(analysis[key]))
-                w.write("category: "+key+" ")
-                w.write("confidence: "+str(analysis[key]))
-                w.write("\n")
-
-            if (("people & society" in key.lower() or "sensitive subjects" in key.lower()) and (float(analysis[key])<0.5 and (sentiment.score>-0.25 and sentiment.score<0.25))):
-                poffensive+=1
-                poffensive_list.append(text1)
-            elif (("people & society" in key.lower() or "sensitive subjects" in key.lower()) and ((float(analysis[key])>=0.5) and sentiment.score<=-0.25)) or "adult" in key.lower():
-                loffensive+=1
-                loffensive_list.append(text1)
-            else:
-                pass
-                neutral+=1
-            print (i)
-            total+=1
-    except:
-        print("error")
+    analysis = classify(text)
+    for key in analysis:
         with open("lastoutput.txt","a+") as w:
+            print ("category: "+key+" ")
+            print ("confidence: "+str(analysis[key]))
+            w.write("category: "+key+" ")
+            w.write("confidence: "+str(analysis[key]))
             w.write("\n")
+
+        if (("people & society" in key.lower() or "sensitive subjects" in key.lower()) and (float(analysis[key])<0.5 and (sentiment.score>-0.25 and sentiment.score<0.25))):
+            poffensive+=1
+            poffensive_list.append(text1)
+        elif (("people & society" in key.lower() or "sensitive subjects" in key.lower()) and ((float(analysis[key])>=0.5) and sentiment.score<=-0.25)) or "adult" in key.lower():
+            loffensive+=1
+            loffensive_list.append(text1)
+        else:
+            pass
+            neutral+=1
+        print (i)
+        total+=1
 
     i+=1
 
@@ -143,3 +140,4 @@ print ("Potentially offensive list: ")
 print (poffensive_list)
 print ("Likely offensive list: ")
 print (loffensive_list)
+

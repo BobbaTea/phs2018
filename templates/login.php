@@ -1,24 +1,23 @@
+
 <?php
-  define('DB_SERVER', 'presence.cmw5zmeeepxi.us-east-1.rds.amazonaws.com:3306');
-   define('DB_USERNAME', 'presence');
-   define('DB_PASSWORD', 'presence');
-   define('DB_DATABASE', 'presencedb');
-   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-   session_start();
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']);  
-      $sql = "SELECT * FROM user WHERE username = '$myusername' AND password = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      $count = mysqli_num_rows($result);	
-      if($count == 1) {
-          echo "naniii";
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-         header("location: welcome.php");
-      }else {
-          echo "no";
-         $error = "Your Login Name or Password is invalid";
-      }
+   include("sessionv.php");
+   if( session_verify()==true){
+header('Location: analysis.php'); 
+}
 ?>
+
+<!DOCTYPE html>
+
+<html>
+<head></head>
+<body>
+<form action="loginvalidate.php" method="POST">
+  
+    <input type="text" name="username" placeholder="Username"><br><br>
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit">
+</form>
+</body>
+
+
+</html>

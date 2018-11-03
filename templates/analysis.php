@@ -1,3 +1,19 @@
+<?php
+
+   include("sessionv.php");
+   if( session_verify()==false){
+header('Location: login.php'); 
+
+}else{
+  echo "true";  
+ }
+
+if(isset($_POST['analyze'])){
+shell_exec("python3 Classification.py ".$handle." ".$_COOKIE['id'].";" );
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,6 +81,9 @@
                   <h4>0</h4>
                 </div>
                 <div class="card-action blue">
+                   <form action="">
+                   <input type="submit" name = "analyze">
+                      </form>
                   <a href="" class="white-text">Link</a>
                 </div>
               </div>

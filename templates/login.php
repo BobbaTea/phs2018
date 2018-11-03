@@ -14,7 +14,7 @@
       $count = mysqli_num_rows($result);	
       if($count == 1) {
           echo "naniii";
-         $_SESSION['login_user'] = $myusername;
+        setcookie("login_user", $myusername);
          header("location: welcome.php");
       }else {
           echo "no";

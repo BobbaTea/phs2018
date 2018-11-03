@@ -9,7 +9,10 @@ header('Location: analysis.php');
 <!DOCTYPE html>
 
 <html>
-<head></head>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
 <body>
 <form action="loginvalidate.php" method="POST">
   

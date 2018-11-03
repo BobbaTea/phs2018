@@ -17,7 +17,7 @@ from google.cloud.language import types
 hand = str(sys.argv[1])
 id = str(sys.argv[2])
 
-f=open("User"+str(id),"w+")
+f=open("User"+str(id)+".txt","w+")
 f.close()
 
 def analyze(handle):
@@ -33,7 +33,7 @@ def analyze(handle):
 
     full_text=""
 
-    with open("User"+str(id),"a+",encoding="utf-8") as w:
+    with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
         for status in statuses:
             status = (status.full_text)
             w.write(status)
@@ -73,7 +73,7 @@ def classify(text, verbose=True):
 
     return result
 
-with open("User"+str(id),"r") as o:
+with open("User"+str(id)+".txt","r") as o:
     r=o.readlines()
 
 i=0
@@ -132,10 +132,10 @@ percent_poffensive = str(round((float(poffensive)/total)*100))
 percent_loffensive = str(round((float(loffensive)/total)*100))
 percent_neut = str(round((float(neutral)/total)*100))
 
-f=open("User"+str(id),"w+")
+f=open("User"+str(id)+".txt","w+")
 f.close()
 
-with open("User"+str(id),"a+") as w:
+with open("User"+str(id)+".txt","a+") as w:
     w.write("\n\nContent Distribution: ")
     w.write("\nPercent potentially offensive: "+percent_poffensive)
     w.write("\nPercent likely offensive: "+percent_loffensive)

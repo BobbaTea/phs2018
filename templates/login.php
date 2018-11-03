@@ -20,7 +20,7 @@ header('Location: analysis.php');
 <form action="loginvalidate.php" method="POST">
     <input type="text" name="username" placeholder="Username"><br><br>
     <input type="password" name="password" placeholder="Password">
-    <input type="submit" class="z-depth-5 btn-large waves-effect waves-light btn-floating btn-large">
+    <input type="submit" class="z-depth-5 btn-large waves-effect waves-light btn-floating btn-large" style="width: 25%;">
 </form>
 </div>
 </body>

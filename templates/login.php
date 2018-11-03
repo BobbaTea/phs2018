@@ -1,6 +1,9 @@
 <?php
-
-$db = mysqli_connect('presence.cmw5zmeeepxi.us-east-1.rds.amazonaws.com:3306', 'presence', 'presence', 'presencedb');
+  define('DB_SERVER', 'presence.cmw5zmeeepxi.us-east-1.rds.amazonaws.com:3306');
+   define('DB_USERNAME', 'presence');
+   define('DB_PASSWORD', 'presence');
+   define('DB_DATABASE', 'presencedb');
+   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
    session_start();
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {

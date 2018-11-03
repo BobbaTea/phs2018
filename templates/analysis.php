@@ -5,7 +5,9 @@ include("");
  if( session_verify()==false){
 header('Location: login.html'); 
 
-}
+}else{
+  echo "true";  
+ }
 
 ?>
 

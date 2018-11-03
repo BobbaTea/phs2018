@@ -14,7 +14,7 @@
       $count = mysqli_num_rows($result);	
       if($count == 1) {
 //  $_SESSION['login_user'] = $myusername;
-        setcookie("login_user", $row[0]);
+        setcookie("login_user", $row['id']);
          header("location: analysis.php");
       }else {
                  header("location: login.php");

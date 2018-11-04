@@ -12,6 +12,9 @@ if($_POST['username']=="@realDonaldTrump"){
        $content = "89";
 
     
+}else{
+      $content = "98-100";
+
 }
     file_put_contents($filename, $content);
 

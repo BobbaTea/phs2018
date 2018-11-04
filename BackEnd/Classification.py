@@ -75,8 +75,7 @@ def classify(text, verbose=True):
     return result
 
 with open("User"+str(id)+".txt","r+") as o:
-    r=o.readlines()
-    o.write(str(len(r)))
+    o.write("")
 o.close()
 
 '''

@@ -128,6 +128,7 @@ while i<len(r):
 
 
 f=open("User"+str(id)+".txt","w+")
+f.close()
 
 
 percent_poffensive = str(round((float(poffensive)/total)*100))

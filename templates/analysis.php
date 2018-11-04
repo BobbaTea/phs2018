@@ -3,9 +3,7 @@
    include("sessionv.php");
    if( session_verify()==false){
 header('Location: login.php'); 
-}else{
-  echo "true";  
- }
+}else
 ?>
 
 

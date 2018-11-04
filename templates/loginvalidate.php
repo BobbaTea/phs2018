@@ -15,10 +15,13 @@
       if($count == 1) {
 //  $_SESSION['login_user'] = $myusername;
         setcookie("login_user", $row['id']);
-         header("location: analysis.php");
-      }else {
-                 header("location: login.php");
-          echo "Your Login Name or Password is invalid";
+       // file_put_content("result.txt", "0");
+        header("location: analysis.php");
+
+
+      }else{
+         header("location: login.php");
+         echo "Your Login Name or Password is invalid";
          $error = "Your Login Name or Password is invalid";
       }
 ?>

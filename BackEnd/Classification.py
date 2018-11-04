@@ -39,6 +39,11 @@ with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
         w.write(status)
         w.write("\n")
 
+	
+f=open("User"+str(id)+".txt","w")
+f.close()
+
+'''
 creds = service_account.Credentials.from_service_account_file(
     "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
 client = language.LanguageServiceClient(credentials=creds)
@@ -159,4 +164,4 @@ print ("Potentially offensive list: ")
 print (poffensive_list)
 print ("Likely offensive list: ")
 print (loffensive_list)
-
+'''

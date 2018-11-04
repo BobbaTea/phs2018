@@ -1,24 +1,29 @@
 {
-    "manifest_version": 2,
-    "name": "HackPHS",
-    "version": "0.1",
-    
-    "permissions": [
-    "activeTab"
-    ],
-    
-    "browser_action": {
-        "default_icon": "static/img/logo.jpg",
-        "default_popup": "templates/extension.html",
-        "default_title": "HackPHS!"
-      },
-    
-    "content_scripts": [
+  "manifest_version": 2,
+  "name": "HackPHS",
+  "description": "Find your online presence using sentiment analysis and content classification.",
+  "version": "0.1.1",
+  "author": "Rahul Shah",
+  "permissions": [
+    "activeTab", "notifications"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "static/img/logo.jpg",
+    "default_popup": "templates/extension.html",
+    "default_title": "HackPHS!"
+  },
+  "content_scripts": [
     {
-       "matches": [
-     "*://twitter.com/*"
-       ],
-       "js": ["static/scripts/content_twitter.js"]
-     }
-   ]
-   }
+      "matches": [
+        "http://*/*", "https://*/*"
+      ],
+      "js": [
+        "jquery-3.3.1.min.js", "static/scripts/content_twitter.js"
+      ]
+    }
+  ]
+}

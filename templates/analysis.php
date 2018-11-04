@@ -21,14 +21,9 @@ header('Location: login.php');
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Let's get started with analyzing your profile!">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-
-  <!-- algolia -->
-  <!--<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">-->
-  <!--<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">-->
-  <!--<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>-->
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
@@ -45,6 +40,8 @@ header('Location: login.php');
     </nav>
   </div>
 
+
+
 </header>
 
 <main>
@@ -52,6 +49,11 @@ header('Location: login.php');
     <!--   Icon Section   -->
     <div>
       <div class="center  container"><br>
+
+        <div>
+          <input id="search-input" placeholder="Search for products">
+          <!-- We use a specific placeholder in the input to guides users in their search. -->
+        </div>
 
         <div id="typed-strings">
        
@@ -156,8 +158,28 @@ header('Location: login.php');
   <br> <br>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-<script src="app.js"></script>
+  <script type="text/html" id="hit-template">
+    <div class="hit">
+      <div class="hit-image">
+        <img src="{{image}}" alt="{{name}}">
+      </div>
+      <div class="hit-content">
+        <h3 class="hit-price">${{price}}</h3>
+        <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+        <p class="hit-description">{{{_highlightResult.description.value}}}</p>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/html" id="no-results-template">
+    <div id="no-results-message">
+      <p>We didn't find any results for the search <em>"{{query}}"</em>.</p>
+      <a href="." class='clear-all'>Clear search</a>
+    </div>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
+  <script src="../static/js/search-simplified.js"></script>
 
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

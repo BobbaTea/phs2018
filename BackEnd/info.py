@@ -18,7 +18,7 @@ def analyze(handle):
 
   twitter_api = twitter.Api(consumer_key=twitter_consumer_key, consumer_secret=twitter_consumer_secret, access_token_key=twitter_access_token, access_token_secret=twitter_access_secret, tweet_mode="extended")
 
-  statuses = twitter_api.GetUserTimeline(screen_name=handle, count=200, include_rts=False)
+  statuses = twitter_api.GetUserTimeline(screen_name=handle, count=20, include_rts=False)
 
   full_text=""
 

@@ -101,7 +101,7 @@ header('Location: login.php');
                     <input type="text" name="username" placeholder="Username"><br><br>
                     <input type="submit"
                        class="z-depth-5 btn-large waves-effect waves-light btn-floating btn-large"
-                       style="width: 75%;">
+                       style="width: 75%;" placeholder="Analyze">
                   </form>
                   <a href="" class="white-text"></a>
                 </div>

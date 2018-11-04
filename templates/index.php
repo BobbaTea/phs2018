@@ -77,7 +77,7 @@
           function gsbutton() {
               document.getElementById('main').innerHTML =
                   '<button style="margin-left: 20px;" class="btn btn-primary btn-xl invert text-uppercase js-scroll-trigger"' +
-                  ' href="login.html">Login</button>';
+                  ' href="login.php">Login</button>';
           }
       </script>
     </div>

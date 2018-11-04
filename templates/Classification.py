@@ -97,7 +97,7 @@ while i<len(r):
     sentiment = client.analyze_sentiment(document=document).document_sentiment
     analysis = classify(text)
     for key in analysis:
-        if (("people & society" in key.lower() or "sensitive subjects" in key.lower()) and (float(analysis[key])<0.5 and (sentiment.score>-0.25 and sentiment.score<0.25))):
+        if (("people & society" in key.lower() or "sensitive subjects" in key.lower() or "arts & entertainment" in key.lower()) and (float(analysis[key])<0.5 and (sentiment.score>-0.25 and sentiment.score<0.25))):
             poffensive+=1
             poffensive_list.append(text1)
         elif (("people & society" in key.lower() or "sensitive subjects" in key.lower()) and ((float(analysis[key])>=0.5) and sentiment.score<=-0.25)) or "adult" in key.lower():

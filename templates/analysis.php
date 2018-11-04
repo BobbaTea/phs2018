@@ -74,7 +74,7 @@ header('Location: login.php');
                   <span>Overall Score:</span>
                   <h4>0</h4>
                 </div>
-                <div class="card-action orange">
+                <div class="card-action red">
                   <a href="" class="white-text">Coming Soon!</a>
                 </div>
               </div>

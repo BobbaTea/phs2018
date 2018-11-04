@@ -1,7 +1,7 @@
 <?php
 
 
-header('location: templates/')
+header('location: templates/index.html');
 
 
 ?>

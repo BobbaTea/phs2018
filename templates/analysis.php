@@ -121,7 +121,6 @@ header('Location: login.php');
                   <h4>0</h4>
                 </div>
                 <div class="card-action pink">
-                  <a href="" class="white-text">Link</a>
                 </div>
               </div>
             </div>

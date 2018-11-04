@@ -15,10 +15,10 @@
       if($count == 1) {
 //  $_SESSION['login_user'] = $myusername;
         setcookie("login_user", $row['id']);
-           //    file_put_content("result.txt", "0");
+              file_put_content("result.txt", "0");
 
          header("location: analysis.php");
-}
+
 
       }else {
                  header("location: login.php");

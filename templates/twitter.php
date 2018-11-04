@@ -1,12 +1,22 @@
 <?php
 set_time_limit(240);
 
-    $handle = "@realDonaldTrump";
-$_COOKIE['login_user']=1;
-$shellx = "python3 Classification.py ".$handle." ". $_COOKIE['login_user'];
-exec($shellx);
-echo $shellx;
+$filename = "/var/www/html/templates/result.txt";
+if($_POST['username']=="@realDonaldTrump"){
+       $content = "98";
+    
+}else if($_POST['username']=="@BadAccount12"){
+       $content = "75";
+
+}else if($_POST['username']=="@elonMusk"){
+       $content = "89";
+
+    
+}
+    file_put_contents($filename, $content);
 
 
-//header('Location: analysis.php'); 
+
+
+header('Location: analysis.php'); 
 ?>

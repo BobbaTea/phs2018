@@ -70,12 +70,15 @@
     <div class="intro-text">
       <div class="intro-heading text-uppercase">preZense</div>
       <div id="main">
-        <form action="login.php">
-        <input type= "Submit" value = "Login" class="btn btn-primary btn-xl invert text-uppercase js-scroll-trigger">
-        </form>
+        <a onclick="gsbutton()" class="btn btn-primary btn-xl invert text-uppercase js-scroll-trigger">Login</a>
+
       </div>
       <script>
-         
+          function gsbutton() {
+              document.getElementById('main').innerHTML =
+                  '<button style="margin-left: 20px;" class="btn btn-primary btn-xl invert text-uppercase js-scroll-trigger"' +
+                  ' href="login.html">Login</button>';
+          }
       </script>
     </div>
     <br>
@@ -88,8 +91,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">What we do?</h2>
-        <h3 class="section-subheading text-muted">preZense was made to bring people together through Artificial
-          Intelligence.</h3>
+        <h3 class="section-subheading text-muted">preZense /h3>
       </div>
     </div>
     <div class="row text-center">
@@ -99,11 +101,9 @@
             <i class="blue fas fa-atom"></i>
           </span>
         <h4 class="service-heading">Artificial Intelligence</h4>
-        <p class="text-muted">At preZense, we have put together the latest technologies so that everything --
-          even
-          a something as advanced as Machine Learning is reduced to an easy to use abstraction that
-          allows you to get
-          information on your preZense at the same time.</p>
+        <p class="text-muted">At preZence, we harness a complex process known as
+          machine learning and use it to gather information which is presented to you
+          in a user-friendly interface. </p>
       </div>
       <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -111,11 +111,11 @@
             <i class="fas fa-users green"></i>
           </span>
         <h4 class="service-heading">Connect</h4>
-        <p class="text-muted">With preZense, you can get see your presence <b></b> your
-          interests. With only a simple click of a button, our Machine Learning algorithms can give
-          suggestions
-          on what it
-          thinks are potentially negative comments.</p>
+        <p class="text-muted">Analyze your entire presence on a social media platofrm with
+            just a click of a button. Gather information to reconsider your identity and
+            change your
+
+        </p>
       </div>
       <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -198,7 +198,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <span class="copyright">Copyright &copy; 4Presence 2018</span>
+        <span class="copyright">Copyright &copy; preZence 2018</span>
       </div>
       <div class="col-md-4">
         <ul class="list-inline social-buttons">

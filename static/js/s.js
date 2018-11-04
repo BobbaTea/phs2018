@@ -1,7 +1,9 @@
 function xd() {
   let x = document.getElementById("search-input").value;
-  
-  if (x === "Reddit") {
+
+  x = x.toLowerCase();
+
+  if ("reddit".includes(x)) {
     document.getElementById('main').innerHTML = '          <div class="col s12 m4">\n' +
       '            <div class="container">\n' +
       '              <div class="card">\n' +
@@ -21,7 +23,7 @@ function xd() {
       '            </div>\n' +
       '          </div>';
   }
-  else if (x === "Twitter") {
+  else if ("twitter".includes(x)) {
     document.getElementById('main').innerHTML = '          <div class="col s12 m4">\n' +
       '            <div class="container">\n' +
       '              <div class="card">\n' +
@@ -46,7 +48,7 @@ function xd() {
       '            </div>\n' +
       '          </div>';
   }
-  else if (x === "Facebook") {
+  else if ("facebook".includes(x)) {
     document.getElementById('main').innerHTML = '            <div class="col s12 m4">\n' +
       '              <div class="container">\n' +
       '                <div class="card left">\n' +

@@ -16,7 +16,11 @@
 //  $_SESSION['login_user'] = $myusername;
         setcookie("login_user", $row['id']);
          header("location: analysis.php");
-        file_put_contents("/var/www/html/templates/result.txt", "");
+        $f = @fopen("result.txt", "r+");
+if ($f !== false) {
+    ftruncate($f, 0);
+    fclose($f);
+}
 
       }else {
                  header("location: login.php");

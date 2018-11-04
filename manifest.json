@@ -9,7 +9,7 @@
     
     "browser_action": {
         "default_icon": "static/img/logo.jpg",
-        "default_popup": "templates/extension-warning.html",
+        "default_popup": "templates/extension.html",
         "default_title": "HackPHS!"
       },
     

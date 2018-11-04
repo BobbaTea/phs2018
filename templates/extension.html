@@ -1,110 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="" style="display: block;">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-  <meta name="twitter:widgets:csp" content="on">
-  <title>Post a Tweet on Twitter</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="https://abs.twimg.com/a/1540858334/css/tfw/intents_rosetta.bundle.css">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="../static/css/style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <title>File Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <!-- Twitter starts here: -->
-  <style type="text/css">
-    html {
-      display: none;
-    }
-  </style>
-  <noscript>
-    <style type="text/css">
-      html {
-        display: block;
-      }
-    </style>
-  </noscript>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/error.css"/>
 </head>
+<body id="index-banner">
+<div class="container text-center" id="error">
+    <svg height="100" width="100">
+        <polygon points="50,25 17,80 82,80" stroke-linejoin="round"
+                 style="fill:none;stroke:#eed202;stroke-width:8"></polygon>
+        <text fill="#000000" font-family="sans-serif" font-size="42px" font-weight="900" x="42" y="74">!</text>
+    </svg>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="main-icon text-warning"></div>
 
-
-<body class=" tfw en logged-in ltr js">
-
-<div id="header" role="banner">
-  <div class="bar">
-    <h1 class="logo">
-      <a class="alternate-context" href="https://twitter.com/home">Twitter</a>
-    </h1>
-
-    <div id="session" role="navigation">
-      <h2 class="current-user"><a href="https://twitter.com/rshah2020" title="Rahul Shah">
-        <img src="https://pbs.twimg.com/profile_images/983859265499627520/Vbe3PeLh_normal.jpg" alt="" width="32" height="32">
-        <span class="name">rshah2020</span> </a></h2>
-      <div class="user-menu">
-        <div class="dropdown-caret">
-          <span class="caret-outer"></span> <span class="caret-inner"></span>
+            <h1 style="color: red;"><strong>Warning</strong></h1>
+            <input type="text" id="lol">
         </div>
-        <h3 class="session">User Management</h3>
-        <ul class="session">
-          <li class="view-profile"><a href="https://twitter.com/rshah2020" title="">View Profile</a></li>
-          <li class="new"><a href="https://twitter.com/intent/tweet">New Tweet</a></li>
-          <li class="help break-before"><a href="https://twitter.com/help">Help Center</a></li>
-          <li class="settings break-before"><a href="https://twitter.com/settings">Settings</a></li>
-          <li class="signout">
-            <form action="https://twitter.com/logout" method="post">
-              <input type="hidden" name="_method" value="delete">
-              <input type="hidden" name="referer" value="/intent/tweet">
-              <input type="submit" class="textual link" value="Sign out">
-            </form>
-          </li>
-        </ul>
-      </div>
     </div>
-  </div>
+
+    <div id="response"></div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-push-3">
+            <button onclick="myFunction()"></button>
+            <script src="../static/js/get-text.js"></script>
+            <p class="lead"></p>
+        </div>
+    </div>
 </div>
-
-<br />
-
-<div id="bd" role="main">
-  <h2 class="action-information">
-    What’s happening? </h2>
-
-  <form action="https://twitter.com/intent/tweet" id="update-form" method="post">
-    <div class="hd">
-      <label for="status" id="status-label">Tweet Text</label>
-    </div>
-
-
-    <div class="bd ">
-    <span class="field">
-      <textarea id="status" name="status" required="" autofocus="" aria-required="true" aria-describedby="post-error char-count"></textarea>
-    </span>
-    </div>
-
-    <div class="ft">
-      <fieldset class="submit">
-        <input type="submit" class="button selected submit" value="Tweet" disabled="">
-      </fieldset>
-    </div>
-  </form>
-
-</div>
-<!-- Twitter ends here: -->
-
-<!-- App starts here: -->
-<div class="container">
-  <div class="left row">
-    <h4>PrejudiceWatch</h4>
-  </div>
-  <div class="center row">
-    <a class="btn waves-effect waves-light" onClick="scrapeThePage()">Run analysis.</a>
-  </div>
-</div>
-<!-- App ends here: -->
-
-<script src="../static/scripts/content_twitter.js"></script>
-
 </body>
 </html>

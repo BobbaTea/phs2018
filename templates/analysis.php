@@ -81,6 +81,7 @@ header('Location: login.php');
                 </div>
                 <div class="card-action blue">
                    <form action="twitter.php" method="POST">
+                     <input type ="text" placeholder ="Handle">
                    <input type="submit" name ="analyze">
                       </form>
                   <a href="" class="white-text">Link</a>

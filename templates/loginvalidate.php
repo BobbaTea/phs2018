@@ -17,7 +17,7 @@
         setcookie("login_user", $row['id']);
                file_put_content("result.txt", "0");
 
-         header("location: analysis.php");
+         header("Location: analysis.php");
 }
 
       }else {

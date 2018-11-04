@@ -72,7 +72,7 @@ def classify(text, verbose=True):
     return result
 
 with open("User"+str(id)+".txt","w+") as o:
-    o.write("")
+    o.write("yooo")
 o.close()
 
 '''

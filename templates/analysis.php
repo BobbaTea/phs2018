@@ -72,7 +72,7 @@ header('Location: login.php');
 
                   <p>You don't have a Reddit account, go make one!</p>
                   <span>Overall Score:</span>
-                  <h4>0</h4>
+                  <h4><?php  echo file_get_contents("result.txt");   ?></h4>
                 </div>
                 <div class="card-action orange">
                   <a href="" class="white-text">Coming Soon!</a>

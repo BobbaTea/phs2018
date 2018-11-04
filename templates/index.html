@@ -76,8 +76,11 @@
       </div>
       <script>
           function gsbutton() {
-              document.getElementById('main').innerHTML = '<button class="btn btn-primary btn-xl invert text-uppercase js-scroll-trigger" style="margin-right: 20px;" href="register.html">Register</button>' +
-                  '<button href="login.php" style="margin-left: 20px;" class="btn btn-primary btn-xl invert text-uppercase js-scroll-trigger">Login</button>';
+              document.getElementById('main').innerHTML =
+                  '<button class="btn btn-primary btn-xl invert text-uppercase js-scroll-trigger" style="margin-right: 20px;' +
+                  '" href="register.html">Register</button>' +
+                  '<button href="login.php" style="margin-left: 20px;" class="btn btn-primary btn-xl invert text-uppercase js-scroll-trigger"' +
+                  '>Login</button>';
           }
       </script>
     </div>

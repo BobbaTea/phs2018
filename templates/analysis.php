@@ -41,7 +41,7 @@ header('Location: login.php');
 
 
       <a href="#" class="brand-logo center">
-        <img class="responsive-img" src="../static/img/logo1.jpg" width="50" height="50"
+        <img class="responsive-img" src="../static/img/realLogo.jpg" width="50" height="50"
              style="margin-top: 5px;"/></a>
       <a href="#" class="brand-logo right" style="font-size:12px"></a>
     </nav>
@@ -54,12 +54,11 @@ header('Location: login.php');
     <!--   Icon Section   -->
     <div>
       <div class="center  container"><br>
-        <h1 class="header center">Your Score: 100</h1>
+
         <div id="typed-strings">
-          <p>Your score is out of <strong>1600</strong>.</p>
-          <p>There is <em>a lot</em> that <i>you</i> can <strong>improve</strong> on!</p>
+       
         </div>
-        <span id="typed"></span>
+
         <div class="container">
 
         </div>

@@ -71,13 +71,12 @@ def classify(text, verbose=True):
 
     return result
 
-with open("User"+str(id)+".txt","r") as o:
-    r=o.readlines()
+f=open("User"+str(id)+".txt","r")
 
 i=0
 total = 0
 neutral=0
-while i<len(r):
+while i<len(list(f)):
     text= str(r[i]).rstrip('\n')
 
     s = text.split(" ")

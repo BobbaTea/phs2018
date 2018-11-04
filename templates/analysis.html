@@ -24,6 +24,7 @@ header('Location: login.php');
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script src="../static/js/s.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
@@ -52,6 +53,8 @@ header('Location: login.php');
 
         <div>
           <input id="search-input" placeholder="Search for products">
+          <a class="z-depth-5 btn-large waves-effect waves-light btn-floating btn-large" style="width: 10%;" href="javascript:xd()">Search</a>
+
           <!-- We use a specific placeholder in the input to guides users in their search. -->
         </div>
 
@@ -63,7 +66,7 @@ header('Location: login.php');
 
         </div>
         <br>
-        <div class="row">
+        <div class="row" id="main">
           <div class="col s12 m4">
             <div class="container">
               <div class="card">
@@ -97,9 +100,9 @@ header('Location: login.php');
                 </div>
                 <div class="card-action blue">
                   <form action="twitter.php" method="POST">
-                    <input type="text" name="username" placeholder="Handle"><br><br>
+                    <input type="text" name="username" placeholder="Username"><br><br>
                     <input type="submit"
-                       class="z-depth-5 btn-large waves-effect waves-light btn-floating btn-large"
+                       class="z-depth-5 btn-large waves-effect waves-light btn-large"
                        style="width: 75%;" name="Analyze">
                   </form>
                   <a href="" class="white-text"></a>
@@ -191,7 +194,7 @@ header('Location: login.php');
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {

@@ -72,11 +72,10 @@ def classify(text, verbose=True):
 
     return result
 
-with open("User"+str(id)+".txt","w") as file:
-	file.write("LOL")
-
-with open("User"+str(id)+".txt","r") as o:
-    r=o.readlines()
+with open("User"+str(id)+".txt","r+") as o:
+	r=o.readlines()
+	o.write(str(len(r))
+o.close()
 
 i=0
 total = 0
@@ -130,15 +129,16 @@ while i<len(r):
 
     i+=1
 
-o.close()
-
+'''
 f=open("User"+str(id)+".txt","w+")
 f.close()
-
+'''
+	  
 percent_poffensive = str(round((float(poffensive)/total)*100))
 percent_loffensive = str(round((float(loffensive)/total)*100))
 percent_neut = str(round((float(neutral)/total)*100))
 
+'''
 with open("User"+str(id)+".txt","a+") as w:
     w.write("\n\nContent Distribution: ")
     w.write("\nPercent potentially offensive: "+percent_poffensive)
@@ -155,6 +155,7 @@ with open("User"+str(id)+".txt","a+") as w:
         w.write("\n"+v)
 
 w.close()
+'''
 
 print ("------------")
 print (total)

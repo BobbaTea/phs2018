@@ -33,10 +33,10 @@ statuses = twitter_api.GetUserTimeline(screen_name=hand, count=20, include_rts=F
 full_text=""
 
 with open("UserInput"+str(id)+".txt","a+",encoding="utf-8") as w:
-for status in statuses:
-    status = (status.full_text)
-    w.write(status)
-    w.write("\n")
+    for status in statuses:
+        status = (status.full_text)
+        w.write(status)
+        w.write("\n")
 
 creds = service_account.Credentials.from_service_account_file(
     "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")

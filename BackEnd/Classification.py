@@ -18,8 +18,6 @@ hand = str(sys.argv[1])
 id = str(sys.argv[2])
 
 f=open("User"+str(id)+".txt","w+")
-f.close()
-
 
 twitter_consumer_key = '1hzEEKAnhiiy6mRUvROfOHVsr'
 twitter_consumer_secret = 'Cme0jpREgjfWEz2XhwZ1h9nwfoygU2XWdvX1tkDRjtWm9rRJC9'
@@ -71,11 +69,11 @@ def classify(text, verbose=True):
 
     return result
 
-f=open("User"+str(id)+".txt","r")
-long = len(list(f))
+f4=open("User"+str(id)+".txt","r")
+long = len(list(f4))
 
-lol=open("User"+str(id)+".txt","w")
-lol.write("lol")
+f5=open("User"+str(id)+".txt","w")
+f5.write("lol")
 
 '''
 i=0

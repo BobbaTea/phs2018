@@ -113,7 +113,7 @@ f=open("UserOut"+str(id)+".txt","w+")
 f.close()
 
 score+=loffensive
-score+=(poffensive//2)
+score+=poffensive
 
 score=str(100-round((float(score)/total)*100))
 

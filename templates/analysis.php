@@ -91,11 +91,11 @@ header('Location: login.php');
                   <h5><b>Twitter</b></h5><br>
                   <p>You did not give a Twitter - you do not have a Twitter.</p>
                   <span>Overall Score:</span>
-                  <h4>0</h4>
+                  <h4><?php echo file_get_contents("result.txt"); ?>></h4>
                 </div>
                 <div class="card-action blue">
                   <form action="twitter.php" method="POST">
-                    <input type="text" name="username" placeholder="Username"><br><br>
+                    <input type="text" name="username" placeholder="Handle"><br><br>
                     <input type="submit"
                        class="z-depth-5 btn-large waves-effect waves-light btn-floating btn-large"
                        style="width: 75%;" name="Analyze">

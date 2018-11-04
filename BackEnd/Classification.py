@@ -41,7 +41,7 @@ with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
 
 w.close()
 
-'''
+
 creds = service_account.Credentials.from_service_account_file(
     "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
 client = language.LanguageServiceClient(credentials=creds)
@@ -79,7 +79,7 @@ with open("User"+str(id)+".txt","r+") as o:
     o.write(str(len(r)))
 o.close()
 
-
+'''
 i=0
 total = 0
 neutral=0

@@ -16,7 +16,7 @@ header('Location: analysis.php');
 </head>
 <body>
 <div class="container">
-<h1>Login</h1>
+<h1 class = "white-text">Login</h1>
 <form action="loginvalidate.php" method="POST">
     <input type="text" name="username" placeholder="Username"><br><br>
     <input type="password" name="password" placeholder="Password">

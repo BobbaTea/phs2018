@@ -41,10 +41,9 @@ with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
 
 	
 f=open("User"+str(id)+".txt","r")
-r=len(f.readlines())
 
-z=open("User"+str(id)+".txt","w")
-z.write(str(r))
+z=open("User"+str(id)+".txt","w+")
+z.write("hey")
 z.close()
 
 '''

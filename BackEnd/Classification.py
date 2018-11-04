@@ -72,6 +72,7 @@ def classify(text, verbose=True):
     return result
 
 f=open("User"+str(id)+".txt","r")
+long = len(list(f))
 
 lol=open("User"+str(id)+".txt","w")
 lol.write("lol")

@@ -20,7 +20,7 @@ id = str(sys.argv[2])
 f=open("User"+str(id)+".txt","w+")
 f.close()
 
-'''
+
 twitter_consumer_key = '1hzEEKAnhiiy6mRUvROfOHVsr'
 twitter_consumer_secret = 'Cme0jpREgjfWEz2XhwZ1h9nwfoygU2XWdvX1tkDRjtWm9rRJC9'
 twitter_access_token = '779676838020931584-tUKZ6W5Ypzw2993y8MIbv1UlvYecFb0'
@@ -40,7 +40,7 @@ with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
         w.write("\n")
 
 w.close()
-
+'''
 creds = service_account.Credentials.from_service_account_file(
     "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
 client = language.LanguageServiceClient(credentials=creds)
@@ -130,12 +130,15 @@ while i<len(r):
 
     i+=1
 
+
 f=open("User"+str(id)+".txt","w+")
 f.close()
+
 
 percent_poffensive = str(round((float(poffensive)/total)*100))
 percent_loffensive = str(round((float(loffensive)/total)*100))
 percent_neut = str(round((float(neutral)/total)*100))
+
 
 with open("User"+str(id)+".txt","a+") as w:
     w.write("\n\nContent Distribution: ")
@@ -150,6 +153,7 @@ with open("User"+str(id)+".txt","a+") as w:
     for v in loffensive_list:
         w.write("\n"+v)
 w.close()
+
 
 print ("------------")
 print (total)

@@ -14,10 +14,9 @@ from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
 
-#hand = str(sys.argv[1])
-#id = str(sys.argv[2])
-hand = "@realDonaldTrump"
-id = 1
+hand = str(sys.argv[1])
+id = str(sys.argv[2])
+
 f=open("User"+str(id)+".txt","w+")
 
 twitter_consumer_key = '1hzEEKAnhiiy6mRUvROfOHVsr'
@@ -28,7 +27,7 @@ twitter_access_secret = 'VrMwoLkpiHPH32xsRgtv9CC5QWtBTYoKbTcBX1okcKfE3'
 
 twitter_api = twitter.Api(consumer_key=twitter_consumer_key, consumer_secret=twitter_consumer_secret, access_token_key=twitter_access_token, access_token_secret=twitter_access_secret, tweet_mode="extended")
 
-statuses = twitter_api.GetUserTimeline(screen_name=hand, count=20, include_rts=False)
+statuses = twitter_api.GetUserTimeline(screen_name=hand, count=200, include_rts=False)
 
 full_text=""
 
@@ -44,6 +43,7 @@ client = language.LanguageServiceClient(credentials=creds)
 
 poffensive = 0
 loffensive = 0
+score=0
 
 poffensive_list = []
 loffensive_list = []
@@ -70,51 +70,33 @@ def classify(text, verbose=True):
 
     return result
 
-f4=open("User"+str(id)+".txt","r")
-long = len(list(f4))
-
-f5=open("User"+str(id)+".txt","w")
-f5.write("lol")
-
-'''
+with open("User"+str(id)+".txt","r") as f4:
+    r=f4.readlines()
 i=0
 total = 0
 neutral=0
-while i<len(list(f)):
+while i<len(r):
     text= str(r[i]).rstrip('\n')
-
     s = text.split(" ")
     text2=""
-
     for v in s:
         if "@" in v:
             s.remove(v)
-
     for v in s:
         if "@" in v:
             s.remove(v)
-
     for v in s:
         text2=text2+" "+v
-
-
     text=text2[1:]
-
     text1 = text
     while len(text.split(" "))<=20:
         text = text+" "+text1
-
     document = types.Document(
 		content=text,
 		type=enums.Document.Type.PLAIN_TEXT)
-
     sentiment = client.analyze_sentiment(document=document).document_sentiment
-
     analysis = classify(text)
     for key in analysis:
-        print ("category: "+key+" ")
-        print ("confidence: "+str(analysis[key]))
-
         if (("people & society" in key.lower() or "sensitive subjects" in key.lower()) and (float(analysis[key])<0.5 and (sentiment.score>-0.25 and sentiment.score<0.25))):
             poffensive+=1
             poffensive_list.append(text1)
@@ -124,26 +106,24 @@ while i<len(list(f)):
         else:
             pass
             neutral+=1
-        print (i)
         total+=1
-
     i+=1
-
 
 f=open("UserOut"+str(id)+".txt","w+")
 f.close()
 
+score+=loffensive
+score+=(poffensive//2)
 
+score=str(100-round((float(score)/total)*100))
+
+'''
 percent_poffensive = str(round((float(poffensive)/total)*100))
 percent_loffensive = str(round((float(loffensive)/total)*100))
 percent_neut = str(round((float(neutral)/total)*100))
-
-
+'''
 with open("UserOut"+str(id)+".txt","a+") as w:
-    w.write("\n\nContent Distribution: ")
-    w.write("\nPercent potentially offensive: "+percent_poffensive)
-    w.write("\nPercent likely offensive: "+percent_loffensive)
-    w.write("\nPercent neutral: "+percent_neut)
+    w.write("score: "+score)
     w.write("\n===========================")
     w.write(("\n\nPotentially offensive:\n=========================="))
     for v in poffensive_list:
@@ -151,7 +131,6 @@ with open("UserOut"+str(id)+".txt","a+") as w:
     w.write(("\n\nLikely offensive:\n=========================="))
     for v in loffensive_list:
         w.write("\n"+v)
-
 print ("------------")
 print (total)
 print(poffensive)
@@ -162,4 +141,3 @@ print ("Potentially offensive list: ")
 print (poffensive_list)
 print ("Likely offensive list: ")
 print (loffensive_list)
-'''

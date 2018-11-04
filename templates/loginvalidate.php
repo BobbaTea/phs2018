@@ -15,11 +15,9 @@
       if($count == 1) {
 //  $_SESSION['login_user'] = $myusername;
         setcookie("login_user", $row['id']);
+               file_put_content("/var/www/html/template/result.txt", "0");
+
          header("location: analysis.php");
-        $f = @fopen("result.txt", "r+");
-if ($f !== false) {
-    ftruncate($f, 0);
-    fclose($f);
 }
 
       }else {

@@ -99,9 +99,9 @@ header('Location: login.php');
                 <div class="card-action blue">
                   <form action="twitter.php" method="POST">
                     <input type="text" name="username" placeholder="Username"><br><br>
-                    <a type="submit"
+                    <input type="submit"
                        class="z-depth-5 btn-large waves-effect waves-light btn-floating btn-large"
-                       style="width: 75%;">Analyze</a>
+                       style="width: 75%;">
                   </form>
                   <a href="" class="white-text"></a>
                 </div>

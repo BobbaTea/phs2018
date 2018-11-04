@@ -130,16 +130,13 @@ while i<len(r):
 
     i+=1
 
-'''
 f=open("User"+str(id)+".txt","w+")
 f.close()
-'''
 
 percent_poffensive = str(round((float(poffensive)/total)*100))
 percent_loffensive = str(round((float(loffensive)/total)*100))
 percent_neut = str(round((float(neutral)/total)*100))
 
-'''
 with open("User"+str(id)+".txt","a+") as w:
     w.write("\n\nContent Distribution: ")
     w.write("\nPercent potentially offensive: "+percent_poffensive)
@@ -153,7 +150,6 @@ with open("User"+str(id)+".txt","a+") as w:
     for v in loffensive_list:
         w.write("\n"+v)
 w.close()
-'''
 
 print ("------------")
 print (total)

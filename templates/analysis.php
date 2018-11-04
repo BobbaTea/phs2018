@@ -56,7 +56,8 @@ header('Location: login.php');
       <div class="center  container"><br>
         <h1 class="header center">Your Score: 100</h1>
         <div id="typed-strings">
-
+          <p>Your score is out of <strong>1600</strong>.</p>
+          <p>There is <em>a lot</em> that <i>you</i> can <strong>improve</strong> on!</p>
         </div>
         <span id="typed"></span>
         <div class="container">
@@ -98,9 +99,9 @@ header('Location: login.php');
                 <div class="card-action blue">
                   <form action="twitter.php" method="POST">
                     <input type="text" name="username" placeholder="Username"><br><br>
-                    <a type="submit"
+                    <input type="submit"
                        class="z-depth-5 btn-large waves-effect waves-light btn-floating btn-large"
-                       style="width: 75%;">Analyze</a>
+                       style="width: 75%;">
                   </form>
                   <a href="" class="white-text"></a>
                 </div>
@@ -192,3 +193,16 @@ header('Location: login.php');
 </script>
 </body>
 </html>
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.

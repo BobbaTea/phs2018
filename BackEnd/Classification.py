@@ -78,8 +78,6 @@ i=0
 total = 0
 neutral=0
 while i<len(r):
-    with open("User"+str(id)+".txt","a+") as f:
-        f.write("fuck me")
     text= str(r[i]).rstrip('\n')
 
     s = text.split(" ")

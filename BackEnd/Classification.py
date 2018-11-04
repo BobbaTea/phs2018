@@ -37,6 +37,8 @@ with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
         status = (status.full_text)
         w.write(status)
         w.write("\n")
+	
+w.close()
 
 creds = service_account.Credentials.from_service_account_file(
     "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
@@ -70,7 +72,9 @@ def classify(text, verbose=True):
 
     return result
 
-w.close()
+with open("User"+str(id)+".txt","w") as file:
+	file.write("LOL")
+
 with open("User"+str(id)+".txt","r") as o:
     r=o.readlines()
 

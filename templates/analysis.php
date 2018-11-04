@@ -1,6 +1,6 @@
 
 <?php
-file_set_contents("/var/www/html/templates/result.txt", "");
+file_put_contents("/var/www/html/templates/result.txt", "");
    include("sessionv.php");
    if( session_verify()==false){
 header('Location: login.php'); 

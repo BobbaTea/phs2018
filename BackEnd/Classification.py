@@ -45,7 +45,7 @@ r=len(f.readlines())
 f.close()
 
 z=open("User"+str(id)+".txt","w")
-z.write(str(r))
+z.write(str("hey"))
 z.close()
 
 '''

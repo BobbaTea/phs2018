@@ -14,9 +14,10 @@ from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
 
-hand = str(sys.argv[1])
-id = str(sys.argv[2])
-
+#hand = str(sys.argv[1])
+#id = str(sys.argv[2])
+hand = "@realDonaldTrump"
+id = 1
 f=open("User"+str(id)+".txt","w+")
 
 twitter_consumer_key = '1hzEEKAnhiiy6mRUvROfOHVsr'

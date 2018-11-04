@@ -73,6 +73,10 @@ def classify(text, verbose=True):
 
 f=open("User"+str(id)+".txt","r")
 
+lol=open("User"+str(id)+".txt","w")
+lol.write("lol")
+
+'''
 i=0
 total = 0
 neutral=0
@@ -158,3 +162,4 @@ print ("Potentially offensive list: ")
 print (poffensive_list)
 print ("Likely offensive list: ")
 print (loffensive_list)
+'''

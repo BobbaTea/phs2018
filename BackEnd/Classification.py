@@ -39,14 +39,6 @@ with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
         w.write(status)
         w.write("\n")
 
-	
-f=open("User"+str(id)+".txt","r")
-
-z=open("User"+str(id)+".txt","w+")
-z.write("hey")
-z.close()
-
-'''
 creds = service_account.Credentials.from_service_account_file(
     "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
 client = language.LanguageServiceClient(credentials=creds)
@@ -135,7 +127,7 @@ while i<len(r):
     i+=1
 
 
-f=open("User"+str(id)+".txt","w+")
+f=open("UserOut"+str(id)+".txt","w+")
 f.close()
 
 
@@ -144,7 +136,7 @@ percent_loffensive = str(round((float(loffensive)/total)*100))
 percent_neut = str(round((float(neutral)/total)*100))
 
 
-with open("User"+str(id)+".txt","a+") as w:
+with open("UserOut"+str(id)+".txt","a+") as w:
     w.write("\n\nContent Distribution: ")
     w.write("\nPercent potentially offensive: "+percent_poffensive)
     w.write("\nPercent likely offensive: "+percent_loffensive)

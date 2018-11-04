@@ -40,7 +40,7 @@ with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
         w.write("\n")
 
 w.close()
-'''
+
 creds = service_account.Credentials.from_service_account_file(
     "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
 client = language.LanguageServiceClient(credentials=creds)
@@ -73,11 +73,13 @@ def classify(text, verbose=True):
 
     return result
 
+
 with open("User"+str(id)+".txt","r+") as o:
-	r=o.readlines()
-	o.write(str(len(r))
+    r=o.readlines()
+    o.write(str(len(r)))
 o.close()
 
+'''
 i=0
 total = 0
 neutral=0
@@ -165,4 +167,3 @@ print ("Potentially offensive list: ")
 print (poffensive_list)
 print ("Likely offensive list: ")
 print (loffensive_list)
-'''

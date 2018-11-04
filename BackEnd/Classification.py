@@ -39,9 +39,6 @@ with open("User"+str(id)+".txt","a+",encoding="utf-8") as w:
         w.write(status)
         w.write("\n")
 
-w.close()
-
-
 creds = service_account.Credentials.from_service_account_file(
     "/var/www/html/BackEnd/SocialEye-ca911f59a028.json")
 client = language.LanguageServiceClient(credentials=creds)
@@ -74,7 +71,7 @@ def classify(text, verbose=True):
 
     return result
 
-with open("User"+str(id)+".txt","r+") as o:
+with open("User"+str(id)+".txt","w+") as o:
     o.write("")
 o.close()
 

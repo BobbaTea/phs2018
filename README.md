@@ -1,5 +1,8 @@
 # PreZense 
 
+Note: Backend has been separate from front end due to some scripting issues
+
+
 Test it out:
 http://www.pre-zense.com
 
